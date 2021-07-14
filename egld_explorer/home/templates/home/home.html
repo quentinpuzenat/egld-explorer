@@ -1,8 +1,9 @@
 {% extends "home/layout.html" %}
 
 {% block content %}
-    <h1>body of homepage</h1>
     <p>On a réussi à stocker {{nb_prix}} prix dans la df.</p>
     <p>that is the price of the {{symbol}}: {{price}} $</p>
-    <iframe width="100%" height="75%" src="{% url 'principal_chart' %}" frameborder="0"></iframe>
+    
+    <div class="col-md-12">{{graph|safe}}</div>
+    
 {% endblock %}
